@@ -1,0 +1,18 @@
+[
+  {
+    "month": "5月",
+    "cost": 66788,
+    "collection": 1854098,
+    "target": 1709158,
+    "roi": 27.8,
+    "achievement": 108.5
+  },
+  {
+    "month": "6月",
+    "cost": 66960,
+    "collection": 1339238,
+    "target": 2128795,
+    "roi": 20,
+    "achievement": 62.9
+  }
+]
