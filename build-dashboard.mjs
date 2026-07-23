@@ -25,7 +25,7 @@ const html = `<!doctype html>
 </main><footer class="footer">数据更新于 <span id="generatedAt"></span> · 数据源：渠道业务部分贝通明细、差旅额度、用车额度、渠道城市经理月度回款 · GitHub Pages 独立看板</footer>
 <script>
 const DATA=${embedded};const S=DATA.summary,P=DATA.people,M=DATA.monthlySummary,A=DATA.areaSummary;
-const money=n=>n==null?'暂无数据':'¥'+Number(n).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const money=n=>n==null?'暂无数据':'¥'+Math.round(Number(n)).toLocaleString('zh-CN');
 const pct=n=>n==null?'—':(Number(n)*100).toFixed(1)+'%';const mult=n=>n==null?'—':Number(n).toFixed(1)+'x';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cls=n=>n==null?'':n>.8?'high':n>2/3?'mid':'low';const list=x=>x.map(v=>esc(v.name)).join('、')||'—';
