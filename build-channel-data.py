@@ -80,6 +80,8 @@ for name in all_people:
     else:
         role = "其他/历史人员"
 
+    q2_travel_quota = num(tq.get("二季度额度（5-7月）", 0)) if tq is not None else 0
+    q2_car_quota = num(cq.get("2季度用车（5-7月）", 0)) if cq is not None else 0
     monthly = []
     total_travel = 0.0
     total_car = 0.0
@@ -95,8 +97,8 @@ for name in all_people:
         if idx >= 5:
             q2_travel_actual += travel_actual
             q2_car_actual += car_actual
-        travel_month_quota = num(tq.get(f"{idx}月差旅", 0)) if tq is not None and idx <= 4 else 0
-        car_month_quota = num(cq.get(f"{idx}月用车", 0)) if cq is not None and idx <= 4 else 0
+        travel_month_quota = num(tq.get(f"{idx}月差旅", 0)) if tq is not None and idx <= 4 else q2_travel_quota / 3
+        car_month_quota = num(cq.get(f"{idx}月用车", 0)) if cq is not None and idx <= 4 else q2_car_quota / 3
         monthly.append(
             {
                 "month": month,
@@ -112,8 +114,8 @@ for name in all_people:
 
     jan_apr_travel_quota = sum(num(tq.get(f"{i}月差旅", 0)) for i in range(1, 5)) if tq is not None else 0
     jan_apr_car_quota = sum(num(cq.get(f"{i}月用车", 0)) for i in range(1, 5)) if cq is not None else 0
-    q2_travel_quota = num(tq.get("二季度额度（5-7月）", 0)) if tq is not None else 0
-    q2_car_quota = num(cq.get("2季度用车（5-7月）", 0)) if cq is not None else 0
+    period_travel_quota = jan_apr_travel_quota + q2_travel_quota / 3 * 2
+    period_car_quota = jan_apr_car_quota + q2_car_quota / 3 * 2
 
     collection_monthly = []
     collection_total = 0.0
@@ -140,6 +142,8 @@ for name in all_people:
     total_cost = total_travel + total_car
     q2_total_quota = q2_travel_quota + q2_car_quota
     q2_total_actual = q2_travel_actual + q2_car_actual
+    period_total_quota = period_travel_quota + period_car_quota
+    period_usage = total_cost / period_total_quota if period_total_quota else None
     roi = collection_total / total_cost if total_cost else None
     achievement = collection_total / target_total if target_total else None
     expense_rate = total_cost / collection_total if collection_total else None
@@ -170,12 +174,12 @@ for name in all_people:
             score += 3
             tags.append("投入产出偏低")
     q2_usage = q2_total_actual / q2_total_quota if q2_total_quota else None
-    if q2_usage is not None and q2_usage > 2 / 3:
+    if period_usage is not None and period_usage > 1:
         score += 2
-        tags.append("Q2费用节奏偏快")
-    if q2_usage is not None and q2_usage > 0.8:
+        tags.append("1–6月额度超额")
+    elif period_usage is not None and period_usage > 0.8:
         score += 2
-        tags.append("Q2额度预警")
+        tags.append("1–6月额度预警")
     if len(city_counter) >= 4:
         tags.append("到访城市多")
 
@@ -208,6 +212,13 @@ for name in all_people:
             "totalActual": round(total_cost, 2),
             "janAprTravelQuota": round(jan_apr_travel_quota, 2),
             "janAprCarQuota": round(jan_apr_car_quota, 2),
+            "periodTravelQuota": round(period_travel_quota, 2),
+            "periodCarQuota": round(period_car_quota, 2),
+            "periodTotalQuota": round(period_total_quota, 2),
+            "periodTravelUsage": total_travel / period_travel_quota if period_travel_quota else None,
+            "periodCarUsage": total_car / period_car_quota if period_car_quota else None,
+            "periodUsage": period_usage,
+            "periodRemaining": round(period_total_quota - total_cost, 2),
             "q2TravelQuota": round(q2_travel_quota, 2),
             "q2CarQuota": round(q2_car_quota, 2),
             "q2TravelActual": round(q2_travel_actual, 2),
@@ -253,6 +264,8 @@ for idx, month in enumerate(MONTHS, 1):
             "travelActual": round(travel_actual, 2),
             "carActual": round(car_actual, 2),
             "totalActual": round(travel_actual + car_actual, 2),
+            "travelQuota": round(sum(p["monthly"][idx - 1]["travelQuota"] for p in people), 2),
+            "carQuota": round(sum(p["monthly"][idx - 1]["carQuota"] for p in people), 2),
             "collection": round(col, 2),
             "target": round(target, 2),
             "achievement": col / target if target else None,
@@ -270,6 +283,10 @@ for area in sorted({p["area"] for p in people}):
             "travelActual": round(sum(p["travelActual"] for p in members), 2),
             "carActual": round(sum(p["carActual"] for p in members), 2),
             "totalActual": round(sum(p["totalActual"] for p in members), 2),
+            "periodTravelQuota": round(sum(p["periodTravelQuota"] for p in members), 2),
+            "periodCarQuota": round(sum(p["periodCarQuota"] for p in members), 2),
+            "periodTotalQuota": round(sum(p["periodTotalQuota"] for p in members), 2),
+            "periodRemaining": round(sum(p["periodRemaining"] for p in members), 2),
             "q2TravelQuota": round(sum(p["q2TravelQuota"] for p in members), 2),
             "q2CarQuota": round(sum(p["q2CarQuota"] for p in members), 2),
             "q2TotalQuota": round(sum(p["q2TotalQuota"] for p in members), 2),
@@ -280,6 +297,21 @@ for area in sorted({p["area"] for p in people}):
     area_summary[-1]["q2Usage"] = (
         area_summary[-1]["q2Actual"] / area_summary[-1]["q2TotalQuota"]
         if area_summary[-1]["q2TotalQuota"]
+        else None
+    )
+    area_summary[-1]["periodTravelUsage"] = (
+        area_summary[-1]["travelActual"] / area_summary[-1]["periodTravelQuota"]
+        if area_summary[-1]["periodTravelQuota"]
+        else None
+    )
+    area_summary[-1]["periodCarUsage"] = (
+        area_summary[-1]["carActual"] / area_summary[-1]["periodCarQuota"]
+        if area_summary[-1]["periodCarQuota"]
+        else None
+    )
+    area_summary[-1]["periodUsage"] = (
+        area_summary[-1]["totalActual"] / area_summary[-1]["periodTotalQuota"]
+        if area_summary[-1]["periodTotalQuota"]
         else None
     )
 
@@ -296,7 +328,7 @@ result = {
     "notes": {
         "expense": "企业支付净额，全状态正负冲抵",
         "collection": "城市经理回款与目标数据覆盖1–6月",
-        "quota": "1-4月为月度额度；5月起使用5-7月季度额度，7月消费尚未产生",
+        "quota": "1–4月使用月度额度；5–6月按5–7月季度额度÷3折算月均额度",
     },
     "summary": {
         "people": len(people),
@@ -312,6 +344,10 @@ result = {
         "expenseRate": total_actual / total_collection if total_collection else None,
         "highRisk": sum(1 for p in people if p["risk"] == "高"),
         "efficient": sum(1 for p in people if p["category"] == "高效型"),
+        "periodTravelQuota": round(sum(p["periodTravelQuota"] for p in people), 2),
+        "periodCarQuota": round(sum(p["periodCarQuota"] for p in people), 2),
+        "periodTotalQuota": round(sum(p["periodTotalQuota"] for p in people), 2),
+        "periodRemaining": round(sum(p["periodRemaining"] for p in people), 2),
         "q2TravelQuota": round(sum(p["q2TravelQuota"] for p in people), 2),
         "q2CarQuota": round(sum(p["q2CarQuota"] for p in people), 2),
         "q2TotalQuota": round(sum(p["q2TotalQuota"] for p in people), 2),
@@ -325,6 +361,21 @@ result = {
 result["summary"]["q2Usage"] = (
     result["summary"]["q2Actual"] / result["summary"]["q2TotalQuota"]
     if result["summary"]["q2TotalQuota"]
+    else None
+)
+result["summary"]["periodTravelUsage"] = (
+    result["summary"]["travelActual"] / result["summary"]["periodTravelQuota"]
+    if result["summary"]["periodTravelQuota"]
+    else None
+)
+result["summary"]["periodCarUsage"] = (
+    result["summary"]["carActual"] / result["summary"]["periodCarQuota"]
+    if result["summary"]["periodCarQuota"]
+    else None
+)
+result["summary"]["periodUsage"] = (
+    result["summary"]["totalActual"] / result["summary"]["periodTotalQuota"]
+    if result["summary"]["periodTotalQuota"]
     else None
 )
 

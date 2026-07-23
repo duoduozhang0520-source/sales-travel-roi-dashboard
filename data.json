@@ -5,7 +5,7 @@
   "notes": {
     "expense": "企业支付净额，全状态正负冲抵",
     "collection": "城市经理回款与目标数据覆盖1–6月",
-    "quota": "1-4月为月度额度；5月起使用5-7月季度额度，7月消费尚未产生"
+    "quota": "1–4月使用月度额度；5–6月按5–7月季度额度÷3折算月均额度"
   },
   "summary": {
     "people": 22,
@@ -19,14 +19,21 @@
     "achievement": 0.6037464874816878,
     "roi": 31.82191694700801,
     "expenseRate": 0.03142488246906266,
-    "highRisk": 2,
+    "highRisk": 6,
     "efficient": 0,
+    "periodTravelQuota": 374000.0,
+    "periodCarQuota": 60700.0,
+    "periodTotalQuota": 434700.0,
+    "periodRemaining": 33703.73,
     "q2TravelQuota": 234000.0,
     "q2CarQuota": 32700.0,
     "q2TotalQuota": 266700.0,
     "q2Actual": 145281.11,
     "q2Remaining": 121418.89,
-    "q2Usage": 0.5447360704911886
+    "q2Usage": 0.5447360704911886,
+    "periodTravelUsage": 0.9622679679144385,
+    "periodCarUsage": 0.6772331136738057,
+    "periodUsage": 0.9224666896710375
   },
   "monthlySummary": [
     {
@@ -34,6 +41,8 @@
       "travelActual": 79825.99,
       "carActual": 7075.59,
       "totalActual": 86901.58,
+      "travelQuota": 48000.0,
+      "carQuota": 10000.0,
       "collection": 2993558.0,
       "target": 11394747.0,
       "achievement": 0.26271386280011305,
@@ -44,6 +53,8 @@
       "travelActual": 20654.68,
       "carActual": 1671.21,
       "totalActual": 22325.89,
+      "travelQuota": 48000.0,
+      "carQuota": 9000.0,
       "collection": 2321221.0,
       "target": 2829520.0,
       "achievement": 0.8203585767197263,
@@ -54,6 +65,8 @@
       "travelActual": 76122.13,
       "carActual": 7563.96,
       "totalActual": 83686.09,
+      "travelQuota": 48000.0,
+      "carQuota": 9500.0,
       "collection": 2357668.0,
       "target": 1715898.0,
       "achievement": 1.3740140730975852,
@@ -64,6 +77,8 @@
       "travelActual": 55352.95,
       "carActual": 7448.65,
       "totalActual": 62801.6,
+      "travelQuota": 74000.0,
+      "carQuota": 10400.0,
       "collection": 1677090.0,
       "target": 1357359.0,
       "achievement": 1.2355537481241146,
@@ -74,6 +89,8 @@
       "travelActual": 58653.1,
       "carActual": 7885.54,
       "totalActual": 66538.64,
+      "travelQuota": 78000.0,
+      "carQuota": 10900.0,
       "collection": 1854098.0,
       "target": 1709158.0,
       "achievement": 1.0848019902197457,
@@ -84,6 +101,8 @@
       "travelActual": 69279.37,
       "carActual": 9463.1,
       "totalActual": 78742.47,
+      "travelQuota": 78000.0,
+      "carQuota": 10900.0,
       "collection": 1556835.0,
       "target": 2128795.0,
       "achievement": 0.7313221799186864,
@@ -97,12 +116,19 @@
       "travelActual": 83089.06,
       "carActual": 9520.39,
       "totalActual": 92609.45,
+      "periodTravelQuota": 78000.0,
+      "periodCarQuota": 13200.0,
+      "periodTotalQuota": 91200.0,
+      "periodRemaining": -1409.45,
       "q2TravelQuota": 48000.0,
       "q2CarQuota": 6600.0,
       "q2TotalQuota": 54600.0,
       "q2Actual": 29093.56,
       "q2Remaining": 25506.44,
-      "q2Usage": 0.5328490842490843
+      "q2Usage": 0.5328490842490843,
+      "periodTravelUsage": 1.065244358974359,
+      "periodCarUsage": 0.7212416666666667,
+      "periodUsage": 1.015454495614035
     },
     {
       "area": "北部大区",
@@ -110,12 +136,19 @@
       "travelActual": 96399.13,
       "carActual": 10934.07,
       "totalActual": 107333.2,
+      "periodTravelQuota": 96000.0,
+      "periodCarQuota": 16800.0,
+      "periodTotalQuota": 112800.0,
+      "periodRemaining": 5466.8,
       "q2TravelQuota": 60000.0,
       "q2CarQuota": 8700.0,
       "q2TotalQuota": 68700.0,
       "q2Actual": 38993.03,
       "q2Remaining": 29706.97,
-      "q2Usage": 0.5675841339155749
+      "q2Usage": 0.5675841339155749,
+      "periodTravelUsage": 1.0041576041666667,
+      "periodCarUsage": 0.6508375,
+      "periodUsage": 0.9515354609929078
     },
     {
       "area": "南部大区",
@@ -123,12 +156,19 @@
       "travelActual": 68520.76,
       "carActual": 8472.92,
       "totalActual": 76993.68,
+      "periodTravelQuota": 90000.0,
+      "periodCarQuota": 14200.0,
+      "periodTotalQuota": 104200.0,
+      "periodRemaining": 27206.32,
       "q2TravelQuota": 60000.0,
       "q2CarQuota": 8100.0,
       "q2TotalQuota": 68100.0,
       "q2Actual": 26156.58,
       "q2Remaining": 41943.42,
-      "q2Usage": 0.38409074889867845
+      "q2Usage": 0.38409074889867845,
+      "periodTravelUsage": 0.7613417777777777,
+      "periodCarUsage": 0.5966845070422535,
+      "periodUsage": 0.7389028790786948
     },
     {
       "area": "西部大区",
@@ -136,12 +176,19 @@
       "travelActual": 89326.04,
       "carActual": 10999.15,
       "totalActual": 100325.19,
+      "periodTravelQuota": 74000.0,
+      "periodCarQuota": 12300.0,
+      "periodTotalQuota": 86300.0,
+      "periodRemaining": -14025.19,
       "q2TravelQuota": 48000.0,
       "q2CarQuota": 7200.0,
       "q2TotalQuota": 55200.0,
       "q2Actual": 41830.66,
       "q2Remaining": 13369.34,
-      "q2Usage": 0.757801811594203
+      "q2Usage": 0.757801811594203,
+      "periodTravelUsage": 1.2071086486486486,
+      "periodCarUsage": 0.894239837398374,
+      "periodUsage": 1.1625166859791425
     },
     {
       "area": "部门负责人",
@@ -149,12 +196,19 @@
       "travelActual": 22553.23,
       "carActual": 1181.52,
       "totalActual": 23734.75,
+      "periodTravelQuota": 36000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 40200.0,
+      "periodRemaining": 16465.25,
       "q2TravelQuota": 18000.0,
       "q2CarQuota": 2100.0,
       "q2TotalQuota": 20100.0,
       "q2Actual": 9207.28,
       "q2Remaining": 10892.72,
-      "q2Usage": 0.458073631840796
+      "q2Usage": 0.458073631840796,
+      "periodTravelUsage": 0.6264786111111111,
+      "periodCarUsage": 0.2813142857142857,
+      "periodUsage": 0.5904166666666667
     }
   ],
   "people": [
@@ -171,6 +225,13 @@
       "totalActual": 12962.52,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 0.6015322222222222,
+      "periodCarUsage": 0.7116466666666666,
+      "periodUsage": 0.6172628571428571,
+      "periodRemaining": 8037.48,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 2917.28,
@@ -232,20 +293,20 @@
           "travelActual": 1035.28,
           "carActual": 417.07,
           "totalActual": 1452.35,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.25882,
+          "carUsage": 0.83414
         },
         {
           "month": "6月",
           "travelActual": 1882.0,
           "carActual": 463.73,
           "totalActual": 2345.73,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.4705,
+          "carUsage": 0.9274599999999998
         }
       ],
       "collectionMonthly": [
@@ -346,12 +407,19 @@
       "roleType": "直接回款",
       "category": "高费用低回款",
       "risk": "高",
-      "riskScore": 9,
+      "riskScore": 7,
       "travelActual": 17222.5,
       "carActual": 2119.88,
       "totalActual": 19342.38,
       "janAprTravelQuota": 6000.0,
       "janAprCarQuota": 1000.0,
+      "periodTravelQuota": 14000.0,
+      "periodCarQuota": 2000.0,
+      "periodTotalQuota": 16000.0,
+      "periodTravelUsage": 1.2301785714285713,
+      "periodCarUsage": 1.05994,
+      "periodUsage": 1.2088987500000001,
+      "periodRemaining": -3342.38,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 9927.5,
@@ -413,20 +481,20 @@
           "travelActual": 3675.5,
           "carActual": 434.28,
           "totalActual": 4109.78,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.918875,
+          "carUsage": 0.8685600000000001
         },
         {
           "month": "6月",
           "travelActual": 6252.0,
           "carActual": 720.07,
           "totalActual": 6972.07,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.563,
+          "carUsage": 1.44014
         }
       ],
       "collectionMonthly": [
@@ -519,8 +587,7 @@
       },
       "tags": [
         "回款低于70%",
-        "Q2费用节奏偏快",
-        "Q2额度预警",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -537,6 +604,13 @@
       "totalActual": 15498.61,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 0.7730766666666666,
+      "periodCarUsage": 0.5277433333333333,
+      "periodUsage": 0.7380290476190475,
+      "periodRemaining": 5501.39,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 2081.0,
@@ -598,20 +672,20 @@
           "travelActual": 2081.0,
           "carActual": 371.51,
           "totalActual": 2452.51,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.52025,
+          "carUsage": 0.74302
         },
         {
           "month": "6月",
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.0,
+          "carUsage": 0.0
         }
       ],
       "collectionMonthly": [
@@ -720,6 +794,13 @@
       "totalActual": 0.0,
       "janAprTravelQuota": 0,
       "janAprCarQuota": 0,
+      "periodTravelQuota": 0.0,
+      "periodCarQuota": 0.0,
+      "periodTotalQuota": 0.0,
+      "periodTravelUsage": null,
+      "periodCarUsage": null,
+      "periodUsage": null,
+      "periodRemaining": 0.0,
       "q2TravelQuota": 0,
       "q2CarQuota": 0,
       "q2TravelActual": 0.0,
@@ -741,8 +822,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -751,8 +832,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -761,8 +842,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -771,8 +852,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -781,8 +862,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -791,8 +872,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         }
@@ -848,13 +929,20 @@
       "area": "东部大区",
       "roleType": "直接回款",
       "category": "高费用低回款",
-      "risk": "中",
-      "riskScore": 5,
+      "risk": "高",
+      "riskScore": 7,
       "travelActual": 24161.56,
       "carActual": 2562.89,
       "totalActual": 26724.45,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 1.3423088888888888,
+      "periodCarUsage": 0.8542966666666668,
+      "periodUsage": 1.272592857142857,
+      "periodRemaining": -5724.45,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 7497.75,
@@ -916,20 +1004,20 @@
           "travelActual": 2674.83,
           "carActual": 349.7,
           "totalActual": 3024.53,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.6687075,
+          "carUsage": 0.6994000000000001
         },
         {
           "month": "6月",
           "travelActual": 4822.92,
           "carActual": 621.93,
           "totalActual": 5444.85,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.20573,
+          "carUsage": 1.2438600000000002
         }
       ],
       "collectionMonthly": [
@@ -1022,6 +1110,7 @@
       },
       "tags": [
         "回款低于70%",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -1038,6 +1127,13 @@
       "totalActual": 3693.35,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 0.17187666666666665,
+      "periodCarUsage": 0.19985666666666665,
+      "periodUsage": 0.1758738095238095,
+      "periodRemaining": 17306.65,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 3093.78,
@@ -1099,20 +1195,20 @@
           "travelActual": 1047.78,
           "carActual": 199.64,
           "totalActual": 1247.42,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.261945,
+          "carUsage": 0.39927999999999997
         },
         {
           "month": "6月",
           "travelActual": 2046.0,
           "carActual": 399.93,
           "totalActual": 2445.93,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.5115,
+          "carUsage": 0.79986
         }
       ],
       "collectionMonthly": [
@@ -1213,12 +1309,19 @@
       "roleType": "区总/管理支持",
       "category": "非直接回款角色",
       "risk": "低",
-      "riskScore": 0,
+      "riskScore": 2,
       "travelActual": 25481.88,
       "carActual": 2466.99,
       "totalActual": 27948.87,
       "janAprTravelQuota": 16000.0,
       "janAprCarQuota": 2800.0,
+      "periodTravelQuota": 24000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 28200.0,
+      "periodTravelUsage": 1.061745,
+      "periodCarUsage": 0.5873785714285714,
+      "periodUsage": 0.9910946808510639,
+      "periodRemaining": 251.13,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 6676.04,
@@ -1280,20 +1383,20 @@
           "travelActual": 3958.04,
           "carActual": 465.88,
           "totalActual": 4423.92,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 0.98951,
+          "carUsage": 0.6655428571428571
         },
         {
           "month": "6月",
           "travelActual": 2718.0,
           "carActual": 270.99,
           "totalActual": 2988.99,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 0.6795,
+          "carUsage": 0.38712857142857143
         }
       ],
       "collectionMonthly": [
@@ -1385,6 +1488,7 @@
         "用车": 2466.99
       },
       "tags": [
+        "1–6月额度预警",
         "到访城市多"
       ]
     },
@@ -1395,12 +1499,19 @@
       "roleType": "其他/历史人员",
       "category": "非直接回款角色",
       "risk": "低",
-      "riskScore": 0,
+      "riskScore": 2,
       "travelActual": 3638.0,
       "carActual": 399.48,
       "totalActual": 4037.48,
       "janAprTravelQuota": 4000.0,
       "janAprCarQuota": 500.0,
+      "periodTravelQuota": 4000.0,
+      "periodCarQuota": 500.0,
+      "periodTotalQuota": 4500.0,
+      "periodTravelUsage": 0.9095,
+      "periodCarUsage": 0.79896,
+      "periodUsage": 0.8972177777777778,
+      "periodRemaining": 462.52,
       "q2TravelQuota": 0.0,
       "q2CarQuota": 0.0,
       "q2TravelActual": 0.0,
@@ -1462,8 +1573,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -1472,8 +1583,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         }
@@ -1562,6 +1673,7 @@
         "用车": 399.48
       },
       "tags": [
+        "1–6月额度预警",
         "到访城市多"
       ]
     },
@@ -1571,13 +1683,20 @@
       "area": "西部大区",
       "roleType": "直接回款",
       "category": "高费用低回款",
-      "risk": "中",
-      "riskScore": 5,
+      "risk": "高",
+      "riskScore": 7,
       "travelActual": 7494.5,
       "carActual": 1209.13,
       "totalActual": 8703.63,
       "janAprTravelQuota": 0.0,
       "janAprCarQuota": 0.0,
+      "periodTravelQuota": 8000.0,
+      "periodCarQuota": 1000.0,
+      "periodTotalQuota": 9000.0,
+      "periodTravelUsage": 0.9368125,
+      "periodCarUsage": 1.20913,
+      "periodUsage": 0.9670700000000001,
+      "periodRemaining": 296.37,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 7494.5,
@@ -1639,20 +1758,20 @@
           "travelActual": 2576.5,
           "carActual": 444.24,
           "totalActual": 3020.74,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.644125,
+          "carUsage": 0.88848
         },
         {
           "month": "6月",
           "travelActual": 4918.0,
           "carActual": 764.89,
           "totalActual": 5682.89,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.2295,
+          "carUsage": 1.52978
         }
       ],
       "collectionMonthly": [
@@ -1745,6 +1864,7 @@
       },
       "tags": [
         "回款低于70%",
+        "1–6月额度预警",
         "到访城市多"
       ]
     },
@@ -1761,6 +1881,13 @@
       "totalActual": 5402.37,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 0.2663333333333333,
+      "periodCarUsage": 0.20278999999999997,
+      "periodUsage": 0.25725571428571425,
+      "periodRemaining": 15597.63,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 578.0,
@@ -1822,20 +1949,20 @@
           "travelActual": 200.0,
           "carActual": 0.0,
           "totalActual": 200.0,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.05,
+          "carUsage": 0.0
         },
         {
           "month": "6月",
           "travelActual": 378.0,
           "carActual": 74.42,
           "totalActual": 452.42,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.0945,
+          "carUsage": 0.14884
         }
       ],
       "collectionMonthly": [
@@ -1937,13 +2064,20 @@
       "area": "西部大区",
       "roleType": "招商拓展",
       "category": "非直接回款角色",
-      "risk": "中",
-      "riskScore": 4,
+      "risk": "低",
+      "riskScore": 2,
       "travelActual": 23932.46,
       "carActual": 3357.28,
       "totalActual": 27289.74,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2200.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3600.0,
+      "periodTotalQuota": 21600.0,
+      "periodTravelUsage": 1.329581111111111,
+      "periodCarUsage": 0.9325777777777777,
+      "periodUsage": 1.2634138888888888,
+      "periodRemaining": -5689.74,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 10873.42,
@@ -2005,20 +2139,20 @@
           "travelActual": 6848.52,
           "carActual": 610.43,
           "totalActual": 7458.95,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.7121300000000002,
+          "carUsage": 0.8720428571428571
         },
         {
           "month": "6月",
           "travelActual": 4024.9,
           "carActual": 878.35,
           "totalActual": 4903.25,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.006225,
+          "carUsage": 1.2547857142857142
         }
       ],
       "collectionMonthly": [
@@ -2110,8 +2244,7 @@
         "国内机票": 4290.0
       },
       "tags": [
-        "Q2费用节奏偏快",
-        "Q2额度预警",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -2122,12 +2255,19 @@
       "roleType": "区总/管理支持",
       "category": "非直接回款角色",
       "risk": "低",
-      "riskScore": 0,
+      "riskScore": 2,
       "travelActual": 24034.89,
       "carActual": 2373.07,
       "totalActual": 26407.96,
       "janAprTravelQuota": 16000.0,
       "janAprCarQuota": 2800.0,
+      "periodTravelQuota": 24000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 28200.0,
+      "periodTravelUsage": 1.00145375,
+      "periodCarUsage": 0.5650166666666666,
+      "periodUsage": 0.9364524822695035,
+      "periodRemaining": 1792.04,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 8578.03,
@@ -2189,20 +2329,20 @@
           "travelActual": 4148.03,
           "carActual": 440.86,
           "totalActual": 4588.89,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.0370074999999999,
+          "carUsage": 0.6298
         },
         {
           "month": "6月",
           "travelActual": 4430.0,
           "carActual": 377.14,
           "totalActual": 4807.14,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.1075,
+          "carUsage": 0.5387714285714287
         }
       ],
       "collectionMonthly": [
@@ -2294,6 +2434,7 @@
         "国内机票": 2360.0
       },
       "tags": [
+        "1–6月额度预警",
         "到访城市多"
       ]
     },
@@ -2303,13 +2444,20 @@
       "area": "西部大区",
       "roleType": "区总/管理支持",
       "category": "非直接回款角色",
-      "risk": "中",
-      "riskScore": 4,
+      "risk": "低",
+      "riskScore": 2,
       "travelActual": 32619.36,
       "carActual": 3603.64,
       "totalActual": 36223.0,
       "janAprTravelQuota": 16000.0,
       "janAprCarQuota": 2800.0,
+      "periodTravelQuota": 24000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 28200.0,
+      "periodTravelUsage": 1.35914,
+      "periodCarUsage": 0.8580095238095239,
+      "periodUsage": 1.2845035460992908,
+      "periodRemaining": -8023.0,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 11756.36,
@@ -2371,20 +2519,20 @@
           "travelActual": 6225.86,
           "carActual": 593.57,
           "totalActual": 6819.43,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.556465,
+          "carUsage": 0.847957142857143
         },
         {
           "month": "6月",
           "travelActual": 5530.5,
           "carActual": 887.61,
           "totalActual": 6418.11,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.382625,
+          "carUsage": 1.2680142857142858
         }
       ],
       "collectionMonthly": [
@@ -2476,8 +2624,7 @@
         "用车": 3603.64
       },
       "tags": [
-        "Q2费用节奏偏快",
-        "Q2额度预警",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -2488,12 +2635,19 @@
       "roleType": "直接回款",
       "category": "稳健型",
       "risk": "低",
-      "riskScore": 0,
+      "riskScore": 2,
       "travelActual": 23325.0,
       "carActual": 2594.01,
       "totalActual": 25919.01,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 1.2958333333333334,
+      "periodCarUsage": 0.86467,
+      "periodUsage": 1.2342385714285715,
+      "periodRemaining": -4919.01,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 6503.5,
@@ -2555,20 +2709,20 @@
           "travelActual": 2467.5,
           "carActual": 522.65,
           "totalActual": 2990.15,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.616875,
+          "carUsage": 1.0453
         },
         {
           "month": "6月",
           "travelActual": 4036.0,
           "carActual": 501.14,
           "totalActual": 4537.14,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.009,
+          "carUsage": 1.00228
         }
       ],
       "collectionMonthly": [
@@ -2660,6 +2814,7 @@
         "国内机票": 1690.0
       },
       "tags": [
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -2676,6 +2831,13 @@
       "totalActual": 2189.81,
       "janAprTravelQuota": 6000.0,
       "janAprCarQuota": 500.0,
+      "periodTravelQuota": 6000.0,
+      "periodCarQuota": 500.0,
+      "periodTotalQuota": 6500.0,
+      "periodTravelUsage": 0.32578666666666667,
+      "periodCarUsage": 0.47018,
+      "periodUsage": 0.33689384615384615,
+      "periodRemaining": 4310.19,
       "q2TravelQuota": 0.0,
       "q2CarQuota": 0.0,
       "q2TravelActual": 0.0,
@@ -2737,8 +2899,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         },
@@ -2747,8 +2909,8 @@
           "travelActual": 0.0,
           "carActual": 0.0,
           "totalActual": 0.0,
-          "travelQuota": 0,
-          "carQuota": 0,
+          "travelQuota": 0.0,
+          "carQuota": 0.0,
           "travelUsage": null,
           "carUsage": null
         }
@@ -2849,6 +3011,13 @@
       "totalActual": 19690.65,
       "janAprTravelQuota": 16000.0,
       "janAprCarQuota": 2800.0,
+      "periodTravelQuota": 24000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 28200.0,
+      "periodTravelUsage": 0.722235,
+      "periodCarUsage": 0.561192857142857,
+      "periodUsage": 0.6982499999999999,
+      "periodRemaining": 8509.35,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 4178.32,
@@ -2910,20 +3079,20 @@
           "travelActual": 4178.32,
           "carActual": 470.11,
           "totalActual": 4648.43,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.0445799999999998,
+          "carUsage": 0.6715857142857143
         },
         {
           "month": "6月",
           "travelActual": 0.0,
           "carActual": 173.35,
           "totalActual": 173.35,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 0.0,
+          "carUsage": 0.24764285714285714
         }
       ],
       "collectionMonthly": [
@@ -3031,6 +3200,13 @@
       "totalActual": 26715.54,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2200.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3600.0,
+      "periodTotalQuota": 21600.0,
+      "periodTravelUsage": 1.3128433333333334,
+      "periodCarUsage": 0.8567666666666666,
+      "periodUsage": 1.2368305555555557,
+      "periodRemaining": -5115.54,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 8060.08,
@@ -3092,20 +3268,20 @@
           "travelActual": 2379.76,
           "carActual": 724.72,
           "totalActual": 3104.48,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 0.59494,
+          "carUsage": 1.0353142857142859
         },
         {
           "month": "6月",
           "travelActual": 5680.32,
           "carActual": 631.45,
           "totalActual": 6311.77,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.42008,
+          "carUsage": 0.9020714285714285
         }
       ],
       "collectionMonthly": [
@@ -3197,7 +3373,7 @@
         "国内机票": 2510.0
       },
       "tags": [
-        "Q2费用节奏偏快",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -3208,12 +3384,19 @@
       "roleType": "直接回款",
       "category": "高费用低回款",
       "risk": "高",
-      "riskScore": 9,
+      "riskScore": 7,
       "travelActual": 30766.28,
       "carActual": 2465.55,
       "totalActual": 33231.83,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 1.7092377777777779,
+      "periodCarUsage": 0.8218499999999999,
+      "periodUsage": 1.5824680952380954,
+      "periodRemaining": -12231.83,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 10965.27,
@@ -3275,20 +3458,20 @@
           "travelActual": 4538.04,
           "carActual": 344.37,
           "totalActual": 4882.41,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.13451,
+          "carUsage": 0.68874
         },
         {
           "month": "6月",
           "travelActual": 6427.23,
           "carActual": 694.68,
           "totalActual": 7121.91,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.6068075000000002,
+          "carUsage": 1.3893599999999997
         }
       ],
       "collectionMonthly": [
@@ -3381,8 +3564,7 @@
       },
       "tags": [
         "回款低于70%",
-        "Q2费用节奏偏快",
-        "Q2额度预警",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -3392,13 +3574,20 @@
       "area": "北部大区",
       "roleType": "直接回款",
       "category": "高费用低回款",
-      "risk": "中",
-      "riskScore": 5,
+      "risk": "高",
+      "riskScore": 7,
       "travelActual": 23245.28,
       "carActual": 2280.86,
       "totalActual": 25526.14,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 1.2914044444444444,
+      "periodCarUsage": 0.7602866666666667,
+      "periodUsage": 1.2155304761904762,
+      "periodRemaining": -4526.14,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 7462.14,
@@ -3460,20 +3649,20 @@
           "travelActual": 3349.14,
           "carActual": 390.76,
           "totalActual": 3739.9,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.837285,
+          "carUsage": 0.78152
         },
         {
           "month": "6月",
           "travelActual": 4113.0,
           "carActual": 476.35,
           "totalActual": 4589.35,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 1.02825,
+          "carUsage": 0.9526999999999999
         }
       ],
       "collectionMonthly": [
@@ -3566,6 +3755,7 @@
       },
       "tags": [
         "回款低于70%",
+        "1–6月额度超额",
         "到访城市多"
       ]
     },
@@ -3582,6 +3772,13 @@
       "totalActual": 4763.97,
       "janAprTravelQuota": 4000.0,
       "janAprCarQuota": 500.0,
+      "periodTravelQuota": 12000.0,
+      "periodCarQuota": 1500.0,
+      "periodTotalQuota": 13500.0,
+      "periodTravelUsage": 0.28908333333333336,
+      "periodCarUsage": 0.8633133333333332,
+      "periodUsage": 0.3528866666666666,
+      "periodRemaining": 8736.03,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 3469.0,
@@ -3643,20 +3840,20 @@
           "travelActual": 1571.0,
           "carActual": 535.21,
           "totalActual": 2106.21,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.39275,
+          "carUsage": 1.07042
         },
         {
           "month": "6月",
           "travelActual": 1898.0,
           "carActual": 552.68,
           "totalActual": 2450.68,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.4745,
+          "carUsage": 1.10536
         }
       ],
       "collectionMonthly": [
@@ -3764,6 +3961,13 @@
       "totalActual": 23734.75,
       "janAprTravelQuota": 24000.0,
       "janAprCarQuota": 2800.0,
+      "periodTravelQuota": 36000.0,
+      "periodCarQuota": 4200.0,
+      "periodTotalQuota": 40200.0,
+      "periodTravelUsage": 0.6264786111111111,
+      "periodCarUsage": 0.2813142857142857,
+      "periodUsage": 0.5904166666666667,
+      "periodRemaining": 16465.25,
       "q2TravelQuota": 18000.0,
       "q2CarQuota": 2100.0,
       "q2TravelActual": 8552.5,
@@ -3825,20 +4029,20 @@
           "travelActual": 2298.0,
           "carActual": 152.4,
           "totalActual": 2450.4,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 6000.0,
+          "carQuota": 700.0,
+          "travelUsage": 0.383,
+          "carUsage": 0.21771428571428572
         },
         {
           "month": "6月",
           "travelActual": 6254.5,
           "carActual": 502.38,
           "totalActual": 6756.88,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 6000.0,
+          "carQuota": 700.0,
+          "travelUsage": 1.0424166666666668,
+          "carUsage": 0.7176857142857141
         }
       ],
       "collectionMonthly": [
@@ -3939,13 +4143,20 @@
       "area": "北部大区",
       "roleType": "直接回款",
       "category": "高费用低回款",
-      "risk": "中",
-      "riskScore": 5,
+      "risk": "高",
+      "riskScore": 7,
       "travelActual": 22394.0,
       "carActual": 2596.21,
       "totalActual": 24990.21,
       "janAprTravelQuota": 10000.0,
       "janAprCarQuota": 2000.0,
+      "periodTravelQuota": 18000.0,
+      "periodCarQuota": 3000.0,
+      "periodTotalQuota": 21000.0,
+      "periodTravelUsage": 1.2441111111111112,
+      "periodCarUsage": 0.8654033333333332,
+      "periodUsage": 1.19001,
+      "periodRemaining": -3990.21,
       "q2TravelQuota": 12000.0,
       "q2CarQuota": 1500.0,
       "q2TravelActual": 7268.0,
@@ -4007,20 +4218,20 @@
           "travelActual": 3400.0,
           "carActual": 418.14,
           "totalActual": 3818.14,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.85,
+          "carUsage": 0.8362799999999997
         },
         {
           "month": "6月",
           "travelActual": 3868.0,
           "carActual": 472.01,
           "totalActual": 4340.01,
-          "travelQuota": 0,
-          "carQuota": 0,
-          "travelUsage": null,
-          "carUsage": null
+          "travelQuota": 4000.0,
+          "carQuota": 500.0,
+          "travelUsage": 0.967,
+          "carUsage": 0.9440199999999999
         }
       ],
       "collectionMonthly": [
@@ -4113,6 +4324,7 @@
       },
       "tags": [
         "回款低于70%",
+        "1–6月额度超额",
         "到访城市多"
       ]
     }
