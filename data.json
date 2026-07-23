@@ -4,7 +4,7 @@
   "period": "2026年1-6月",
   "notes": {
     "expense": "企业支付净额，全状态正负冲抵",
-    "collection": "城市经理回款数据从2月开始，1月标记为暂无数据",
+    "collection": "城市经理回款与目标数据覆盖1–6月",
     "quota": "1-4月为月度额度；5月起使用5-7月季度额度，7月消费尚未产生"
   },
   "summary": {
@@ -14,13 +14,13 @@
     "totalActual": 400996.27,
     "travelActual": 359888.22,
     "carActual": 41108.05,
-    "collection": 9766912.0,
-    "target": 9740730.0,
-    "achievement": 1.0026878888953907,
-    "roi": 24.356615586474156,
-    "expenseRate": 0.04105660724699885,
-    "highRisk": 0,
-    "efficient": 6,
+    "collection": 12760470.0,
+    "target": 21135477.0,
+    "achievement": 0.6037464874816878,
+    "roi": 31.82191694700801,
+    "expenseRate": 0.03142488246906266,
+    "highRisk": 2,
+    "efficient": 0,
     "q2TravelQuota": 234000.0,
     "q2CarQuota": 32700.0,
     "q2TotalQuota": 266700.0,
@@ -34,10 +34,10 @@
       "travelActual": 79825.99,
       "carActual": 7075.59,
       "totalActual": 86901.58,
-      "collection": null,
-      "target": null,
-      "achievement": null,
-      "roi": null
+      "collection": 2993558.0,
+      "target": 11394747.0,
+      "achievement": 0.26271386280011305,
+      "roi": 34.44768207896796
     },
     {
       "month": "2月",
@@ -181,11 +181,11 @@
       "q2CarUsage": 0.5871999999999999,
       "q2Usage": 0.28133925925925923,
       "q2Remaining": 9701.92,
-      "collection": 299372.0,
-      "target": 359976.0,
-      "achievement": 0.8316443318443452,
-      "roi": 23.095200624569912,
-      "expenseRate": 0.043299039322314714,
+      "collection": 539805.0,
+      "target": 737730.0,
+      "achievement": 0.7317107884998577,
+      "roi": 41.64352301867229,
+      "expenseRate": 0.02401333814988746,
       "monthly": [
         {
           "month": "1月",
@@ -251,9 +251,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 240433.0,
+          "target": 377754.0,
+          "achievement": 0.6364803549399874
         },
         {
           "month": "2月",
@@ -344,9 +344,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/南部战区",
       "area": "南部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "中",
-      "riskScore": 4,
+      "category": "高费用低回款",
+      "risk": "高",
+      "riskScore": 9,
       "travelActual": 17222.5,
       "carActual": 2119.88,
       "totalActual": 19342.38,
@@ -362,11 +362,11 @@
       "q2CarUsage": 0.7695666666666666,
       "q2Usage": 0.8208777777777778,
       "q2Remaining": 2418.15,
-      "collection": 653836.0,
-      "target": 766989.0,
-      "achievement": 0.8524711566919474,
-      "roi": 33.80328584176301,
-      "expenseRate": 0.029582922934803225,
+      "collection": 916955.0,
+      "target": 1737001.0,
+      "achievement": 0.5278954934395548,
+      "roi": 47.40652391277599,
+      "expenseRate": 0.021094143114983834,
       "monthly": [
         {
           "month": "1月",
@@ -432,9 +432,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 263119.0,
+          "target": 970012.0,
+          "achievement": 0.27125334531943934
         },
         {
           "month": "2月",
@@ -518,6 +518,7 @@
         "用车": 2119.88
       },
       "tags": [
+        "回款低于70%",
         "Q2费用节奏偏快",
         "Q2额度预警",
         "到访城市多"
@@ -528,9 +529,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/南部战区",
       "area": "南部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 13915.38,
       "carActual": 1583.23,
       "totalActual": 15498.61,
@@ -546,11 +547,11 @@
       "q2CarUsage": 0.24767333333333333,
       "q2Usage": 0.18166740740740742,
       "q2Remaining": 11047.49,
-      "collection": 852764.0,
-      "target": 1056317.0,
-      "achievement": 0.8072993239718759,
-      "roi": 55.02196648602681,
-      "expenseRate": 0.018174559432621452,
+      "collection": 1083111.0,
+      "target": 2135187.0,
+      "achievement": 0.5072675133372393,
+      "roi": 69.88439608455211,
+      "expenseRate": 0.0143093459488455,
       "monthly": [
         {
           "month": "1月",
@@ -616,9 +617,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 230347.0,
+          "target": 1078870.0,
+          "achievement": 0.21350765152428003
         },
         {
           "month": "2月",
@@ -702,6 +703,7 @@
         "国内机票": 2200.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -710,9 +712,9 @@
       "department": "",
       "area": "南部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 0.0,
       "carActual": 0.0,
       "totalActual": 0.0,
@@ -728,9 +730,9 @@
       "q2CarUsage": null,
       "q2Usage": null,
       "q2Remaining": 0.0,
-      "collection": 27852.0,
-      "target": 6133.0,
-      "achievement": 4.541333768139573,
+      "collection": 52617.0,
+      "target": 122017.0,
+      "achievement": 0.43122679626609406,
       "roi": null,
       "expenseRate": 0.0,
       "monthly": [
@@ -798,9 +800,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 24765.0,
+          "target": 115884.0,
+          "achievement": 0.21370508439473956
         },
         {
           "month": "2月",
@@ -837,7 +839,7 @@
       "topRoutes": [],
       "byType": {},
       "tags": [
-        "暂无异常"
+        "回款低于70%"
       ]
     },
     {
@@ -845,9 +847,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/东部战区",
       "area": "东部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 24161.56,
       "carActual": 2562.89,
       "totalActual": 26724.45,
@@ -863,11 +865,11 @@
       "q2CarUsage": 0.6477533333333334,
       "q2Usage": 0.6273614814814815,
       "q2Remaining": 5030.62,
-      "collection": 801190.0,
-      "target": 963594.0,
-      "achievement": 0.8314601377758682,
-      "roi": 29.979662818130965,
-      "expenseRate": 0.0333559455310226,
+      "collection": 1005438.0,
+      "target": 1786176.0,
+      "achievement": 0.5628997366440933,
+      "roi": 37.62240195775779,
+      "expenseRate": 0.026579908457806445,
       "monthly": [
         {
           "month": "1月",
@@ -933,9 +935,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 204248.0,
+          "target": 822582.0,
+          "achievement": 0.2483010812295917
         },
         {
           "month": "2月",
@@ -1019,6 +1021,7 @@
         "用车": 2562.89
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -1027,7 +1030,7 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/北部战区",
       "area": "北部大区",
       "roleType": "直接回款",
-      "category": "高效型",
+      "category": "稳健型",
       "risk": "低",
       "riskScore": 0,
       "travelActual": 3093.78,
@@ -1045,11 +1048,11 @@
       "q2CarUsage": 0.3997133333333333,
       "q2Usage": 0.2735814814814814,
       "q2Remaining": 9806.65,
-      "collection": 926331.0,
-      "target": 653934.0,
-      "achievement": 1.4165512115901604,
-      "roi": 250.81051078289363,
-      "expenseRate": 0.003987073734982419,
+      "collection": 1123172.0,
+      "target": 1319729.0,
+      "achievement": 0.8510626045195643,
+      "roi": 304.1065699162008,
+      "expenseRate": 0.003288320933926415,
       "monthly": [
         {
           "month": "1月",
@@ -1115,9 +1118,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 196841.0,
+          "target": 665795.0,
+          "achievement": 0.2956480598382385
         },
         {
           "month": "2月",
@@ -1567,9 +1570,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/西部战区",
       "area": "西部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 7494.5,
       "carActual": 1209.13,
       "totalActual": 8703.63,
@@ -1585,11 +1588,11 @@
       "q2CarUsage": 0.8060866666666667,
       "q2Usage": 0.6447133333333334,
       "q2Remaining": 4796.37,
-      "collection": 770107.0,
-      "target": 854973.0,
-      "achievement": 0.9007383858905486,
-      "roi": 88.48112798912636,
-      "expenseRate": 0.011301845068282721,
+      "collection": 890144.0,
+      "target": 1791779.0,
+      "achievement": 0.4967934103480396,
+      "roi": 102.27272988396794,
+      "expenseRate": 0.00977777752813028,
       "monthly": [
         {
           "month": "1月",
@@ -1655,9 +1658,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 120037.0,
+          "target": 936806.0,
+          "achievement": 0.128134320232791
         },
         {
           "month": "2月",
@@ -1741,6 +1744,7 @@
         "国内机票": 520.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -1749,9 +1753,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/南部战区",
       "area": "南部大区",
       "roleType": "直接回款",
-      "category": "高效型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 4794.0,
       "carActual": 608.37,
       "totalActual": 5402.37,
@@ -1767,11 +1771,11 @@
       "q2CarUsage": 0.049613333333333336,
       "q2Usage": 0.0483274074074074,
       "q2Remaining": 12847.58,
-      "collection": 1108226.0,
-      "target": 1084889.0,
-      "achievement": 1.0215109564204263,
-      "roi": 205.13700468498087,
-      "expenseRate": 0.004874790882004212,
+      "collection": 1305709.0,
+      "target": 2468128.0,
+      "achievement": 0.5290280730983158,
+      "roi": 241.6918870791893,
+      "expenseRate": 0.00413749924370591,
       "monthly": [
         {
           "month": "1月",
@@ -1837,9 +1841,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 197483.0,
+          "target": 1383239.0,
+          "achievement": 0.14276853096247286
         },
         {
           "month": "2月",
@@ -1923,6 +1927,7 @@
         "国内机票": 1920.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -2481,7 +2486,7 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/西部战区",
       "area": "西部大区",
       "roleType": "直接回款",
-      "category": "高效型",
+      "category": "稳健型",
       "risk": "低",
       "riskScore": 0,
       "travelActual": 23325.0,
@@ -2499,11 +2504,11 @@
       "q2CarUsage": 0.6825266666666666,
       "q2Usage": 0.557577037037037,
       "q2Remaining": 5972.71,
-      "collection": 866215.0,
-      "target": 801437.0,
-      "achievement": 1.08082731393734,
-      "roi": 33.420065041064454,
-      "expenseRate": 0.029922144040451855,
+      "collection": 1432512.0,
+      "target": 1946869.0,
+      "achievement": 0.7358029739032261,
+      "roi": 55.268777626923246,
+      "expenseRate": 0.01809339817048653,
       "monthly": [
         {
           "month": "1月",
@@ -2569,9 +2574,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 566297.0,
+          "target": 1145432.0,
+          "achievement": 0.49439600081017465
         },
         {
           "month": "2月",
@@ -3201,9 +3206,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/东部战区",
       "area": "东部大区",
       "roleType": "直接回款",
-      "category": "高效型",
-      "risk": "中",
-      "riskScore": 4,
+      "category": "高费用低回款",
+      "risk": "高",
+      "riskScore": 9,
       "travelActual": 30766.28,
       "carActual": 2465.55,
       "totalActual": 33231.83,
@@ -3219,11 +3224,11 @@
       "q2CarUsage": 0.6926999999999999,
       "q2Usage": 0.8892088888888888,
       "q2Remaining": 1495.68,
-      "collection": 965211.0,
-      "target": 867857.0,
-      "achievement": 1.1121774670250975,
-      "roi": 29.044774242044447,
-      "expenseRate": 0.0344296014032165,
+      "collection": 1158089.0,
+      "target": 1930459.0,
+      "achievement": 0.5999034426527577,
+      "roi": 34.848788044474226,
+      "expenseRate": 0.028695402512242153,
       "monthly": [
         {
           "month": "1月",
@@ -3289,9 +3294,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 192878.0,
+          "target": 1062602.0,
+          "achievement": 0.1815148098723699
         },
         {
           "month": "2月",
@@ -3375,6 +3380,7 @@
         "国内机票": 2030.0
       },
       "tags": [
+        "回款低于70%",
         "Q2费用节奏偏快",
         "Q2额度预警",
         "到访城市多"
@@ -3385,9 +3391,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/北部战区",
       "area": "北部大区",
       "roleType": "直接回款",
-      "category": "高效型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 23245.28,
       "carActual": 2280.86,
       "totalActual": 25526.14,
@@ -3403,11 +3409,11 @@
       "q2CarUsage": 0.5780733333333332,
       "q2Usage": 0.6169814814814815,
       "q2Remaining": 5170.75,
-      "collection": 557298.0,
-      "target": 500504.0,
-      "achievement": 1.1134736185924587,
-      "roi": 21.832443134763032,
-      "expenseRate": 0.04580339423432347,
+      "collection": 783685.0,
+      "target": 1246874.0,
+      "achievement": 0.628519802321646,
+      "roi": 30.70127328299539,
+      "expenseRate": 0.03257193898058531,
       "monthly": [
         {
           "month": "1月",
@@ -3473,9 +3479,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 226387.0,
+          "target": 746370.0,
+          "achievement": 0.3033173894985061
         },
         {
           "month": "2月",
@@ -3559,6 +3565,7 @@
         "国内机票": 2670.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -3567,9 +3574,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/南部战区",
       "area": "南部大区",
       "roleType": "直接回款",
-      "category": "高效型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 3469.0,
       "carActual": 1294.97,
       "totalActual": 4763.97,
@@ -3585,11 +3592,11 @@
       "q2CarUsage": 0.7252599999999999,
       "q2Usage": 0.33754740740740735,
       "q2Remaining": 8943.11,
-      "collection": 722372.0,
-      "target": 536004.0,
-      "achievement": 1.3476988977694195,
-      "roi": 151.63235704674884,
-      "expenseRate": 0.006594898473362754,
+      "collection": 881450.0,
+      "target": 1304161.0,
+      "achievement": 0.6758751411827221,
+      "roi": 185.02425498061493,
+      "expenseRate": 0.005404696806398547,
       "monthly": [
         {
           "month": "1月",
@@ -3655,9 +3662,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 159078.0,
+          "target": 768157.0,
+          "achievement": 0.2070904775976786
         },
         {
           "month": "2月",
@@ -3740,6 +3747,7 @@
         "火车": 3093.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     },
@@ -3930,9 +3938,9 @@
       "department": "光合新知-入校项目组/智课团队/渠道业务部/北部战区",
       "area": "北部大区",
       "roleType": "直接回款",
-      "category": "稳健型",
-      "risk": "低",
-      "riskScore": 0,
+      "category": "高费用低回款",
+      "risk": "中",
+      "riskScore": 5,
       "travelActual": 22394.0,
       "carActual": 2596.21,
       "totalActual": 24990.21,
@@ -3948,11 +3956,11 @@
       "q2CarUsage": 0.5934333333333333,
       "q2Usage": 0.6043074074074074,
       "q2Remaining": 5341.85,
-      "collection": 1216138.0,
-      "target": 1288123.0,
-      "achievement": 0.94411636155864,
-      "roi": 48.664577048372145,
-      "expenseRate": 0.020548827517929708,
+      "collection": 1587783.0,
+      "target": 2609367.0,
+      "achievement": 0.6084935541838308,
+      "roi": 63.53620077622397,
+      "expenseRate": 0.015739058800856288,
       "monthly": [
         {
           "month": "1月",
@@ -4018,9 +4026,9 @@
       "collectionMonthly": [
         {
           "month": "1月",
-          "collection": null,
-          "target": null,
-          "achievement": null
+          "collection": 371645.0,
+          "target": 1321244.0,
+          "achievement": 0.28128415341905055
         },
         {
           "month": "2月",
@@ -4104,6 +4112,7 @@
         "国内机票": 2610.0
       },
       "tags": [
+        "回款低于70%",
         "到访城市多"
       ]
     }

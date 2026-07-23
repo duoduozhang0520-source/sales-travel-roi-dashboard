@@ -6,7 +6,7 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT.parent / "source-data" / "分贝通明细全年_2026-07-23.xlsx"
+SOURCE = ROOT.parent / "source-data" / "分贝通明细全年_2026-07-23_1618.xlsx"
 MONTHS = [f"{i}月" for i in range(1, 7)]
 TRAVEL_TYPES = {"国内机票", "火车", "酒店"}
 MGMT_SUPPORT = {"董乾", "杨巍巍", "熊楠星", "李长玉", "岳家璇"}
@@ -120,7 +120,7 @@ for name in all_people:
     target_total = 0.0
     cr = collection_by_name.get(name)
     for idx, month in enumerate(MONTHS, 1):
-        if idx == 1 or cr is None:
+        if cr is None:
             col = None
             target = None
         else:
@@ -253,10 +253,10 @@ for idx, month in enumerate(MONTHS, 1):
             "travelActual": round(travel_actual, 2),
             "carActual": round(car_actual, 2),
             "totalActual": round(travel_actual + car_actual, 2),
-            "collection": round(col, 2) if idx > 1 else None,
-            "target": round(target, 2) if idx > 1 else None,
-            "achievement": col / target if idx > 1 and target else None,
-            "roi": col / (travel_actual + car_actual) if idx > 1 and travel_actual + car_actual else None,
+            "collection": round(col, 2),
+            "target": round(target, 2),
+            "achievement": col / target if target else None,
+            "roi": col / (travel_actual + car_actual) if travel_actual + car_actual else None,
         }
     )
 
@@ -295,7 +295,7 @@ result = {
     "period": "2026年1-6月",
     "notes": {
         "expense": "企业支付净额，全状态正负冲抵",
-        "collection": "城市经理回款数据从2月开始，1月标记为暂无数据",
+        "collection": "城市经理回款与目标数据覆盖1–6月",
         "quota": "1-4月为月度额度；5月起使用5-7月季度额度，7月消费尚未产生",
     },
     "summary": {
