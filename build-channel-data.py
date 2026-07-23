@@ -150,6 +150,7 @@ for name in all_people:
 
     city_counter = Counter()
     route_counter = Counter()
+    route_count_counter = Counter()
     type_counter = Counter()
     for _, row in rows.iterrows():
         amount = num(row["企业支付总金额"])
@@ -159,7 +160,13 @@ for name in all_people:
             city_counter[destination] += abs(amount)
         if origin and destination:
             route_counter[f"{origin}-{destination}"] += abs(amount)
+            route_count_counter[f"{origin}-{destination}"] += 1
         type_counter[clean(row["业务线"])] += amount
+
+    negative_rows = rows[rows["企业支付总金额"] < 0]
+    record_count = len(rows)
+    negative_record_count = len(negative_rows)
+    negative_amount = abs(float(negative_rows["企业支付总金额"].sum()))
 
     score = 0
     tags = []
@@ -240,6 +247,16 @@ for name in all_people:
             "collectionMonthly": collection_monthly,
             "topCities": top_items(city_counter),
             "topRoutes": top_items(route_counter, 4),
+            "topRoutesByCount": [
+                {"name": route, "value": count}
+                for route, count in route_count_counter.most_common(4)
+            ],
+            "recordCount": record_count,
+            "averagePerRecord": total_cost / record_count if record_count else None,
+            "negativeRecordCount": negative_record_count,
+            "negativeAmount": round(negative_amount, 2),
+            "cityCount": len(city_counter),
+            "routeCount": len(route_count_counter),
             "byType": {k: round(v, 2) for k, v in type_counter.items() if k},
             "tags": tags or ["暂无异常"],
         }

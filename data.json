@@ -405,6 +405,30 @@
           "value": 464.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "郑州市-郑州市",
+          "value": 47
+        },
+        {
+          "name": "周口市-周口市",
+          "value": 32
+        },
+        {
+          "name": "商丘市-商丘市",
+          "value": 13
+        },
+        {
+          "name": "周口市-郑州市",
+          "value": 8
+        }
+      ],
+      "recordCount": 170,
+      "averagePerRecord": 76.25011764705883,
+      "negativeRecordCount": 5,
+      "negativeAmount": 288.0,
+      "cityCount": 11,
+      "routeCount": 24,
       "byType": {
         "酒店": 6770.58,
         "火车": 4057.0,
@@ -595,6 +619,30 @@
           "value": 1237.69
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "深圳市-深圳市",
+          "value": 40
+        },
+        {
+          "name": "海口市-海口市",
+          "value": 40
+        },
+        {
+          "name": "深圳市-广州市",
+          "value": 12
+        },
+        {
+          "name": "广州市-深圳市",
+          "value": 8
+        }
+      ],
+      "recordCount": 148,
+      "averagePerRecord": 130.69175675675677,
+      "negativeRecordCount": 1,
+      "negativeAmount": 375.0,
+      "cityCount": 6,
+      "routeCount": 17,
       "byType": {
         "国内机票": 6849.0,
         "酒店": 7735.0,
@@ -788,6 +836,30 @@
           "value": 635.5
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "潮州市-潮州市",
+          "value": 31
+        },
+        {
+          "name": "中山市-中山市",
+          "value": 12
+        },
+        {
+          "name": "中山市-广州市",
+          "value": 7
+        },
+        {
+          "name": "惠州市-惠州市",
+          "value": 7
+        }
+      ],
+      "recordCount": 125,
+      "averagePerRecord": 123.98888,
+      "negativeRecordCount": 1,
+      "negativeAmount": 32.0,
+      "cityCount": 10,
+      "routeCount": 22,
       "byType": {
         "酒店": 8234.88,
         "火车": 3480.5,
@@ -938,6 +1010,13 @@
       ],
       "topCities": [],
       "topRoutes": [],
+      "topRoutesByCount": [],
+      "recordCount": 0,
+      "averagePerRecord": null,
+      "negativeRecordCount": 0,
+      "negativeAmount": 0.0,
+      "cityCount": 0,
+      "routeCount": 0,
       "byType": {},
       "tags": [
         "回款低于70%"
@@ -1124,6 +1203,30 @@
           "value": 740.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "徐州市-徐州市",
+          "value": 95
+        },
+        {
+          "name": "温州市-温州市",
+          "value": 17
+        },
+        {
+          "name": "苏州市-苏州市",
+          "value": 6
+        },
+        {
+          "name": "徐州市-睢宁县",
+          "value": 4
+        }
+      ],
+      "recordCount": 268,
+      "averagePerRecord": 99.71809701492536,
+      "negativeRecordCount": 5,
+      "negativeAmount": 583.65,
+      "cityCount": 18,
+      "routeCount": 46,
       "byType": {
         "国内机票": 2831.0,
         "酒店": 15548.06,
@@ -1317,6 +1420,30 @@
           "value": 193.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "济宁市-济宁市",
+          "value": 9
+        },
+        {
+          "name": "青岛市-青岛市",
+          "value": 3
+        },
+        {
+          "name": "潍坊市-潍坊市",
+          "value": 3
+        },
+        {
+          "name": "淄博市-青岛市",
+          "value": 2
+        }
+      ],
+      "recordCount": 37,
+      "averagePerRecord": 99.82027027027026,
+      "negativeRecordCount": 0,
+      "negativeAmount": 0.0,
+      "cityCount": 8,
+      "routeCount": 16,
       "byType": {
         "酒店": 1917.28,
         "火车": 1176.5,
@@ -1507,6 +1634,30 @@
           "value": 990.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "长沙市-长沙市",
+          "value": 32
+        },
+        {
+          "name": "深圳市-深圳市",
+          "value": 11
+        },
+        {
+          "name": "武汉市-武汉市",
+          "value": 9
+        },
+        {
+          "name": "广州市-广州市",
+          "value": 8
+        }
+      ],
+      "recordCount": 178,
+      "averagePerRecord": 157.01612359550563,
+      "negativeRecordCount": 2,
+      "negativeAmount": 374.0,
+      "cityCount": 16,
+      "routeCount": 43,
       "byType": {
         "国内机票": 3679.0,
         "酒店": 9823.88,
@@ -1695,6 +1846,30 @@
           "value": 178.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "衡阳市-衡阳市",
+          "value": 12
+        },
+        {
+          "name": "益阳市-益阳市",
+          "value": 3
+        },
+        {
+          "name": "武汉市-长沙市",
+          "value": 2
+        },
+        {
+          "name": "长沙市-衡阳市",
+          "value": 2
+        }
+      ],
+      "recordCount": 38,
+      "averagePerRecord": 106.24947368421053,
+      "negativeRecordCount": 1,
+      "negativeAmount": 13.0,
+      "cityCount": 5,
+      "routeCount": 10,
       "byType": {
         "酒店": 2791.0,
         "火车": 847.0,
@@ -1886,6 +2061,30 @@
           "value": 495.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "运城市-运城市",
+          "value": 15
+        },
+        {
+          "name": "西安市-西安市",
+          "value": 15
+        },
+        {
+          "name": "宝鸡市-宝鸡市",
+          "value": 11
+        },
+        {
+          "name": "西安市-宝鸡市",
+          "value": 7
+        }
+      ],
+      "recordCount": 110,
+      "averagePerRecord": 79.1239090909091,
+      "negativeRecordCount": 3,
+      "negativeAmount": 435.0,
+      "cityCount": 14,
+      "routeCount": 26,
       "byType": {
         "酒店": 3986.0,
         "火车": 2988.5,
@@ -2079,6 +2278,30 @@
           "value": 199.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "南昌市-南昌市",
+          "value": 6
+        },
+        {
+          "name": "三亚市-三亚市",
+          "value": 3
+        },
+        {
+          "name": "黄石市-黄石市",
+          "value": 3
+        },
+        {
+          "name": "武汉市-武汉市",
+          "value": 2
+        }
+      ],
+      "recordCount": 31,
+      "averagePerRecord": 174.27,
+      "negativeRecordCount": 0,
+      "negativeAmount": 0.0,
+      "cityCount": 6,
+      "routeCount": 14,
       "byType": {
         "酒店": 2108.0,
         "火车": 766.0,
@@ -2271,6 +2494,30 @@
           "value": 973.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "潍坊市-潍坊市",
+          "value": 66
+        },
+        {
+          "name": "临汾市-临汾市",
+          "value": 29
+        },
+        {
+          "name": "烟台市-烟台市",
+          "value": 27
+        },
+        {
+          "name": "运城市-运城市",
+          "value": 23
+        }
+      ],
+      "recordCount": 349,
+      "averagePerRecord": 78.19409742120344,
+      "negativeRecordCount": 11,
+      "negativeAmount": 948.52,
+      "cityCount": 29,
+      "routeCount": 80,
       "byType": {
         "酒店": 10834.46,
         "火车": 8808.0,
@@ -2463,6 +2710,30 @@
           "value": 770.92
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "潍坊市-潍坊市",
+          "value": 60
+        },
+        {
+          "name": "泰安市-泰安市",
+          "value": 50
+        },
+        {
+          "name": "德州市-德州市",
+          "value": 7
+        },
+        {
+          "name": "潍坊市-泰安市",
+          "value": 6
+        }
+      ],
+      "recordCount": 263,
+      "averagePerRecord": 100.41049429657794,
+      "negativeRecordCount": 3,
+      "negativeAmount": 961.0,
+      "cityCount": 22,
+      "routeCount": 55,
       "byType": {
         "酒店": 15577.89,
         "火车": 6097.0,
@@ -2655,6 +2926,30 @@
           "value": 1370.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "成都市-成都市",
+          "value": 40
+        },
+        {
+          "name": "西安市-西安市",
+          "value": 14
+        },
+        {
+          "name": "鄂尔多斯市-鄂尔多斯市",
+          "value": 12
+        },
+        {
+          "name": "运城市-运城市",
+          "value": 10
+        }
+      ],
+      "recordCount": 232,
+      "averagePerRecord": 156.13362068965517,
+      "negativeRecordCount": 5,
+      "negativeAmount": 1770.0,
+      "cityCount": 26,
+      "routeCount": 64,
       "byType": {
         "国内机票": 16430.0,
         "酒店": 11567.36,
@@ -2847,6 +3142,30 @@
           "value": 1366.5
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "重庆市-重庆市",
+          "value": 40
+        },
+        {
+          "name": "德阳市-德阳市",
+          "value": 33
+        },
+        {
+          "name": "宜宾市-宜宾市",
+          "value": 30
+        },
+        {
+          "name": "成都市-成都市",
+          "value": 25
+        }
+      ],
+      "recordCount": 329,
+      "averagePerRecord": 78.78118541033436,
+      "negativeRecordCount": 17,
+      "negativeAmount": 1114.5,
+      "cityCount": 14,
+      "routeCount": 43,
       "byType": {
         "酒店": 9878.0,
         "火车": 11757.0,
@@ -3031,6 +3350,30 @@
           "value": 156.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "西安市-宝鸡市",
+          "value": 7
+        },
+        {
+          "name": "宝鸡市-宝鸡市",
+          "value": 6
+        },
+        {
+          "name": "宝鸡市-西安市",
+          "value": 5
+        },
+        {
+          "name": "安康市-安康市",
+          "value": 4
+        }
+      ],
+      "recordCount": 35,
+      "averagePerRecord": 62.565999999999995,
+      "negativeRecordCount": 4,
+      "negativeAmount": 184.5,
+      "cityCount": 4,
+      "routeCount": 9,
       "byType": {
         "酒店": 1173.72,
         "火车": 781.0,
@@ -3221,6 +3564,30 @@
           "value": 1400.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "温州市-温州市",
+          "value": 54
+        },
+        {
+          "name": "福州市-福州市",
+          "value": 6
+        },
+        {
+          "name": "漳州市-漳州市",
+          "value": 5
+        },
+        {
+          "name": "泉州市-泉州市",
+          "value": 5
+        }
+      ],
+      "recordCount": 141,
+      "averagePerRecord": 139.64999999999998,
+      "negativeRecordCount": 1,
+      "negativeAmount": 155.0,
+      "cityCount": 20,
+      "routeCount": 45,
       "byType": {
         "国内机票": 8868.0,
         "火车": 5204.0,
@@ -3412,6 +3779,30 @@
           "value": 964.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "潍坊市-潍坊市",
+          "value": 57
+        },
+        {
+          "name": "济宁市-济宁市",
+          "value": 54
+        },
+        {
+          "name": "德州市-德州市",
+          "value": 13
+        },
+        {
+          "name": "济南市-济南市",
+          "value": 13
+        }
+      ],
+      "recordCount": 294,
+      "averagePerRecord": 90.8691836734694,
+      "negativeRecordCount": 2,
+      "negativeAmount": 618.64,
+      "cityCount": 18,
+      "routeCount": 51,
       "byType": {
         "酒店": 14290.18,
         "火车": 6831.0,
@@ -3604,6 +3995,30 @@
           "value": 811.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "绍兴市-绍兴市",
+          "value": 48
+        },
+        {
+          "name": "丽水市-丽水市",
+          "value": 32
+        },
+        {
+          "name": "厦门市-厦门市",
+          "value": 28
+        },
+        {
+          "name": "福州市-福州市",
+          "value": 12
+        }
+      ],
+      "recordCount": 290,
+      "averagePerRecord": 114.59251724137931,
+      "negativeRecordCount": 7,
+      "negativeAmount": 2383.28,
+      "cityCount": 18,
+      "routeCount": 55,
       "byType": {
         "酒店": 17101.78,
         "火车": 11634.5,
@@ -3797,6 +4212,30 @@
           "value": 1206.5
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "淮北市-淮北市",
+          "value": 56
+        },
+        {
+          "name": "合肥市-合肥市",
+          "value": 44
+        },
+        {
+          "name": "宿州市-宿州市",
+          "value": 32
+        },
+        {
+          "name": "淮北市-合肥市",
+          "value": 15
+        }
+      ],
+      "recordCount": 318,
+      "averagePerRecord": 80.27088050314465,
+      "negativeRecordCount": 14,
+      "negativeAmount": 1186.5,
+      "cityCount": 14,
+      "routeCount": 41,
       "byType": {
         "酒店": 12090.28,
         "火车": 8485.0,
@@ -3990,6 +4429,30 @@
           "value": 474.85
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "长沙市-长沙市",
+          "value": 17
+        },
+        {
+          "name": "岳阳市-岳阳市",
+          "value": 14
+        },
+        {
+          "name": "衡阳市-衡阳市",
+          "value": 11
+        },
+        {
+          "name": "岳阳市-长沙市",
+          "value": 7
+        }
+      ],
+      "recordCount": 88,
+      "averagePerRecord": 54.13602272727272,
+      "negativeRecordCount": 2,
+      "negativeAmount": 71.11,
+      "cityCount": 6,
+      "routeCount": 16,
       "byType": {
         "用车": 1294.97,
         "酒店": 376.0,
@@ -4181,6 +4644,30 @@
           "value": 630.0
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "潍坊市-潍坊市",
+          "value": 18
+        },
+        {
+          "name": "武汉市-武汉市",
+          "value": 6
+        },
+        {
+          "name": "泰安市-济南市",
+          "value": 5
+        },
+        {
+          "name": "枣庄市-枣庄市",
+          "value": 5
+        }
+      ],
+      "recordCount": 135,
+      "averagePerRecord": 175.81296296296296,
+      "negativeRecordCount": 1,
+      "negativeAmount": 200.0,
+      "cityCount": 16,
+      "routeCount": 34,
       "byType": {
         "酒店": 13256.73,
         "火车": 5098.5,
@@ -4372,6 +4859,30 @@
           "value": 903.5
         }
       ],
+      "topRoutesByCount": [
+        {
+          "name": "济南市-济南市",
+          "value": 48
+        },
+        {
+          "name": "德州市-德州市",
+          "value": 30
+        },
+        {
+          "name": "德州市-济南市",
+          "value": 15
+        },
+        {
+          "name": "济南市-德州市",
+          "value": 14
+        }
+      ],
+      "recordCount": 286,
+      "averagePerRecord": 87.37835664335664,
+      "negativeRecordCount": 3,
+      "negativeAmount": 239.5,
+      "cityCount": 21,
+      "routeCount": 60,
       "byType": {
         "酒店": 9542.0,
         "火车": 10242.0,
