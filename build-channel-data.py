@@ -7,7 +7,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parent / "source-data" / "分贝通明细全年_2026-07-23_1618.xlsx"
-MONTHS = [f"{i}月" for i in range(1, 7)]
+LATEST = ROOT / "latest-feishu-7.json"
+MONTHS = [f"{i}月" for i in range(1, 8)]
 TRAVEL_TYPES = {"国内机票", "火车", "酒店"}
 MGMT_SUPPORT = {"董乾", "杨巍巍", "熊楠星", "李长玉", "岳家璇"}
 BIZ_DEV = {"王奉禄", "李铖杰"}
@@ -41,10 +42,24 @@ def top_items(counter, limit=6):
     return [{"name": name, "value": round(value, 2)} for name, value in counter.most_common(limit)]
 
 
+def field_text(value):
+    if isinstance(value, list):
+        return "".join(str(x.get("text", "")) for x in value if isinstance(x, dict))
+    if isinstance(value, dict):
+        return str(value.get("text", value.get("value", "")))
+    return value
+
+
+latest = json.loads(LATEST.read_text(encoding="utf-8"))
 detail = pd.read_excel(SOURCE, sheet_name="渠道业务部部分贝通明细")
-travel_quota = pd.read_excel(SOURCE, sheet_name="差旅额度")
-car_quota = pd.read_excel(SOURCE, sheet_name="用车额度")
-collection = pd.read_excel(SOURCE, sheet_name="渠道城市经理月度回款")
+detail = detail[detail["月份"].isin([f"{i}月" for i in range(1, 7)])].copy()
+july_rows = []
+for record in latest["detail"]:
+    july_rows.append({k: field_text(v) for k, v in record["fields"].items()})
+detail = pd.concat([detail, pd.DataFrame(july_rows)], ignore_index=True)
+travel_quota = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["travel"]])
+car_quota = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["car"]])
+collection = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["collection"]])
 
 detail = detail[detail["月份"].isin(MONTHS)].copy()
 detail["企业支付总金额"] = pd.to_numeric(detail["企业支付总金额"], errors="coerce").fillna(0)
@@ -114,8 +129,8 @@ for name in all_people:
 
     jan_apr_travel_quota = sum(num(tq.get(f"{i}月差旅", 0)) for i in range(1, 5)) if tq is not None else 0
     jan_apr_car_quota = sum(num(cq.get(f"{i}月用车", 0)) for i in range(1, 5)) if cq is not None else 0
-    period_travel_quota = jan_apr_travel_quota + q2_travel_quota / 3 * 2
-    period_car_quota = jan_apr_car_quota + q2_car_quota / 3 * 2
+    period_travel_quota = jan_apr_travel_quota + q2_travel_quota
+    period_car_quota = jan_apr_car_quota + q2_car_quota
 
     collection_monthly = []
     collection_total = 0.0
@@ -183,10 +198,10 @@ for name in all_people:
     q2_usage = q2_total_actual / q2_total_quota if q2_total_quota else None
     if period_usage is not None and period_usage > 1:
         score += 2
-        tags.append("1–6月额度超额")
+        tags.append("1–7月额度超额")
     elif period_usage is not None and period_usage > 0.8:
         score += 2
-        tags.append("1–6月额度预警")
+        tags.append("1–7月额度预警")
     if len(city_counter) >= 4:
         tags.append("到访城市多")
 
@@ -343,13 +358,13 @@ total_collection = sum((x["collection"] or 0) for x in monthly_summary)
 total_target = sum((x["target"] or 0) for x in monthly_summary)
 
 result = {
-    "generatedAt": "2026-07-23",
+    "generatedAt": "2026-08-01",
     "source": "飞书多维表格：分贝通明细全年",
-    "period": "2026年1-6月",
+    "period": "2026年1-7月",
     "notes": {
         "expense": "企业支付净额，全状态正负冲抵",
-        "collection": "城市经理回款与目标数据覆盖1–6月",
-        "quota": "1–4月使用月度额度；5–6月按5–7月季度额度÷3折算月均额度",
+        "collection": "城市经理回款与目标数据覆盖1–7月",
+        "quota": "1–4月使用月度额度；5–7月使用完整季度额度",
     },
     "summary": {
         "people": len(people),
