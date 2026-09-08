@@ -7,8 +7,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parent / "source-data" / "分贝通明细全年_2026-07-23_1618.xlsx"
-LATEST = ROOT / "latest-feishu-7.json"
-MONTHS = [f"{i}月" for i in range(1, 8)]
+LATEST_FILES = [ROOT / "latest-feishu-7.json", ROOT / "latest-feishu-8.json"]
+MONTHS = [f"{i}月" for i in range(1, 9)]
 TRAVEL_TYPES = {"国内机票", "火车", "酒店"}
 MGMT_SUPPORT = {"董乾", "杨巍巍", "熊楠星", "李长玉", "岳家璇"}
 BIZ_DEV = {"王奉禄", "李铖杰"}
@@ -50,13 +50,16 @@ def field_text(value):
     return value
 
 
-latest = json.loads(LATEST.read_text(encoding="utf-8"))
+latest_sets = [json.loads(path.read_text(encoding="utf-8")) for path in LATEST_FILES]
+latest = latest_sets[-1]
 detail = pd.read_excel(SOURCE, sheet_name="渠道业务部部分贝通明细")
 detail = detail[detail["月份"].isin([f"{i}月" for i in range(1, 7)])].copy()
-july_rows = []
-for record in latest["detail"]:
-    july_rows.append({k: field_text(v) for k, v in record["fields"].items()})
-detail = pd.concat([detail, pd.DataFrame(july_rows)], ignore_index=True)
+latest_rows = []
+for dataset in latest_sets:
+    for record in dataset["detail"]:
+        latest_rows.append({k: field_text(v) for k, v in record["fields"].items()})
+detail = pd.concat([detail, pd.DataFrame(latest_rows)], ignore_index=True)
+detail = detail[detail["预订|下单人层级部门"].map(clean).str.contains("渠道业务部", na=False)].copy()
 travel_quota = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["travel"]])
 car_quota = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["car"]])
 collection = pd.DataFrame([{k: field_text(v) for k, v in r["fields"].items()} for r in latest["collection"]])
@@ -97,6 +100,8 @@ for name in all_people:
 
     q2_travel_quota = num(tq.get("二季度额度（5-7月）", 0)) if tq is not None else 0
     q2_car_quota = num(cq.get("2季度用车（5-7月）", 0)) if cq is not None else 0
+    q3_travel_quota = num(tq.get("3季度额度（8-10月）", 0)) if tq is not None else 0
+    q3_car_quota = num(cq.get("3季度用车（8-10月）", 0)) if cq is not None else 0
     monthly = []
     total_travel = 0.0
     total_car = 0.0
@@ -112,8 +117,8 @@ for name in all_people:
         if idx >= 5:
             q2_travel_actual += travel_actual
             q2_car_actual += car_actual
-        travel_month_quota = num(tq.get(f"{idx}月差旅", 0)) if tq is not None and idx <= 4 else q2_travel_quota / 3
-        car_month_quota = num(cq.get(f"{idx}月用车", 0)) if cq is not None and idx <= 4 else q2_car_quota / 3
+        travel_month_quota = num(tq.get(f"{idx}月差旅", 0)) if tq is not None and idx <= 4 else (q2_travel_quota / 3 if idx <= 7 else q3_travel_quota / 3)
+        car_month_quota = num(cq.get(f"{idx}月用车", 0)) if cq is not None and idx <= 4 else (q2_car_quota / 3 if idx <= 7 else q3_car_quota / 3)
         monthly.append(
             {
                 "month": month,
@@ -129,8 +134,8 @@ for name in all_people:
 
     jan_apr_travel_quota = sum(num(tq.get(f"{i}月差旅", 0)) for i in range(1, 5)) if tq is not None else 0
     jan_apr_car_quota = sum(num(cq.get(f"{i}月用车", 0)) for i in range(1, 5)) if cq is not None else 0
-    period_travel_quota = jan_apr_travel_quota + q2_travel_quota
-    period_car_quota = jan_apr_car_quota + q2_car_quota
+    period_travel_quota = jan_apr_travel_quota + q2_travel_quota + q3_travel_quota / 3
+    period_car_quota = jan_apr_car_quota + q2_car_quota + q3_car_quota / 3
 
     collection_monthly = []
     collection_total = 0.0
@@ -141,15 +146,16 @@ for name in all_people:
             col = None
             target = None
         else:
-            col = num(cr.get(f"{idx}月回款", 0))
-            target = num(cr.get(f"{idx}月目标", 0))
-            collection_total += col
-            target_total += target
+            col_key, target_key = f"{idx}月回款", f"{idx}月目标"
+            col = num(cr[col_key]) if col_key in cr and not pd.isna(cr[col_key]) else None
+            target = num(cr[target_key]) if target_key in cr and not pd.isna(cr[target_key]) else None
+            collection_total += col or 0
+            target_total += target or 0
         collection_monthly.append(
             {
                 "month": month,
-                "collection": round(col, 2) if col is not None else None,
-                "target": round(target, 2) if target is not None else None,
+            "collection": round(col, 2) if col is not None else None,
+            "target": round(target, 2) if target is not None else None,
                 "achievement": col / target if col is not None and target else None,
             }
         )
@@ -159,9 +165,10 @@ for name in all_people:
     q2_total_actual = q2_travel_actual + q2_car_actual
     period_total_quota = period_travel_quota + period_car_quota
     period_usage = total_cost / period_total_quota if period_total_quota else None
-    roi = collection_total / total_cost if total_cost else None
+    comparable_cost = sum(m["totalActual"] for i, m in enumerate(monthly) if collection_monthly[i]["collection"] is not None)
+    roi = collection_total / comparable_cost if comparable_cost else None
     achievement = collection_total / target_total if target_total else None
-    expense_rate = total_cost / collection_total if collection_total else None
+    expense_rate = comparable_cost / collection_total if collection_total else None
 
     city_counter = Counter()
     route_counter = Counter()
@@ -198,10 +205,10 @@ for name in all_people:
     q2_usage = q2_total_actual / q2_total_quota if q2_total_quota else None
     if period_usage is not None and period_usage > 1:
         score += 2
-        tags.append("1–7月额度超额")
+        tags.append("1–8月额度超额")
     elif period_usage is not None and period_usage > 0.8:
         score += 2
-        tags.append("1–7月额度预警")
+        tags.append("1–8月额度预警")
     if len(city_counter) >= 4:
         tags.append("到访城市多")
 
@@ -282,16 +289,20 @@ for idx, month in enumerate(MONTHS, 1):
     rows = detail[detail["月份"] == month]
     travel_actual = float(rows[rows["业务线"].isin(TRAVEL_TYPES)]["企业支付总金额"].sum())
     car_actual = float(rows[rows["业务线"] == "用车"]["企业支付总金额"].sum())
-    col = sum(
+    collection_values = [
         p["collectionMonthly"][idx - 1]["collection"] or 0
         for p in people
         if p["roleType"] == "直接回款"
-    )
-    target = sum(
+    ]
+    target_values = [
         p["collectionMonthly"][idx - 1]["target"] or 0
         for p in people
         if p["roleType"] == "直接回款"
-    )
+    ]
+    has_collection = any(p["collectionMonthly"][idx - 1]["collection"] is not None for p in people if p["roleType"] == "直接回款")
+    has_target = any(p["collectionMonthly"][idx - 1]["target"] is not None for p in people if p["roleType"] == "直接回款")
+    col = sum(collection_values) if has_collection else None
+    target = sum(target_values) if has_target else None
     monthly_summary.append(
         {
             "month": month,
@@ -300,10 +311,10 @@ for idx, month in enumerate(MONTHS, 1):
             "totalActual": round(travel_actual + car_actual, 2),
             "travelQuota": round(sum(p["monthly"][idx - 1]["travelQuota"] for p in people), 2),
             "carQuota": round(sum(p["monthly"][idx - 1]["carQuota"] for p in people), 2),
-            "collection": round(col, 2),
-            "target": round(target, 2),
-            "achievement": col / target if target else None,
-            "roi": col / (travel_actual + car_actual) if travel_actual + car_actual else None,
+            "collection": round(col, 2) if col is not None else None,
+            "target": round(target, 2) if target is not None else None,
+            "achievement": col / target if col is not None and target else None,
+            "roi": col / (travel_actual + car_actual) if col is not None and travel_actual + car_actual else None,
         }
     )
 
@@ -356,15 +367,16 @@ total_travel = sum(x["travelActual"] for x in monthly_summary)
 total_car = sum(x["carActual"] for x in monthly_summary)
 total_collection = sum((x["collection"] or 0) for x in monthly_summary)
 total_target = sum((x["target"] or 0) for x in monthly_summary)
+comparable_actual = sum(x["totalActual"] for x in monthly_summary if x["collection"] is not None)
 
 result = {
-    "generatedAt": "2026-08-01",
+    "generatedAt": "2026-09-08",
     "source": "飞书多维表格：分贝通明细全年",
-    "period": "2026年1-7月",
+    "period": "2026年1-8月",
     "notes": {
         "expense": "企业支付净额，全状态正负冲抵",
-        "collection": "城市经理回款与目标数据覆盖1–7月",
-        "quota": "1–4月使用月度额度；5–7月使用完整季度额度",
+        "collection": "城市经理回款与目标数据当前覆盖1–7月，8月待更新",
+        "quota": "1–4月使用月度额度；5–7月使用完整季度额度；8月按8–10月季度额度÷3折算",
     },
     "summary": {
         "people": len(people),
@@ -376,8 +388,8 @@ result = {
         "collection": round(total_collection, 2),
         "target": round(total_target, 2),
         "achievement": total_collection / total_target if total_target else None,
-        "roi": total_collection / total_actual if total_actual else None,
-        "expenseRate": total_actual / total_collection if total_collection else None,
+        "roi": total_collection / comparable_actual if comparable_actual else None,
+        "expenseRate": comparable_actual / total_collection if total_collection else None,
         "highRisk": sum(1 for p in people if p["risk"] == "高"),
         "efficient": sum(1 for p in people if p["category"] == "高效型"),
         "periodTravelQuota": round(sum(p["periodTravelQuota"] for p in people), 2),
